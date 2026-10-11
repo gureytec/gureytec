@@ -56,15 +56,29 @@ Always verify the extracted IP addresses against the original log entries before
 
 ## 5. Evidence and Findings
 
-Complete this section using verified output from the training lab.
+The following results were recorded during a previous training exercise. They must be verified against the original authentication logs before being treated as confirmed findings.
 
-| Investigation field | Result |
+| **Investigation field** | **Recorded result** |
 |---|---|
-| Source IP address | To be verified |
+| Source IP address 1 | `10.10.10.25` — 5 failed attempts (verification pending) |
+| Source IP address 2 | `192.168.1.50` — 3 failed attempts (verification pending) |
 | Targeted usernames | To be verified |
-| Number of failed attempts | To be verified |
-| Subsequent successful login | To be investigated |
+| Subsequent successful login | `192.168.1.20` — relationship to failed attempts not established |
 | Confirmed compromise | Not established |
+
+### Preliminary Assessment
+
+The recorded failed authentication attempts may indicate password guessing activity. However, the original logs must be reviewed to confirm the counts, identify the targeted usernames, and establish the relevant timestamps.
+
+The successful login from `192.168.1.20` must be investigated separately. There is currently insufficient evidence to establish whether it is related to the failed attempts or whether an account was compromised.
+
+### Recommended Next Steps
+
+- Verify the failed-attempt counts using the original authentication logs.
+- Identify the targeted usernames and timestamps.
+- Investigate the successful login and determine which account was used.
+- Correlate the events before deciding whether the activity represents a brute-force attack.
+
 
 ## 6. Investigation Process
 
